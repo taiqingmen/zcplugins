@@ -1,0 +1,36 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": [
+            "> 1%",
+            "last 2 versions",
+            "not ie <= 8"
+          ]
+        }
+      }
+    ],
+    "stage-2"
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "mooc-ui",
+        "libraryDirectory": "components/lib" // 组件源码包名
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "zc-plugins", // 组件名
+        "libraryDirectory": "components" // 组件源码包名
+      }
+    ],
+    "transform-vue-jsx",
+    "transform-runtime"
+  ]
+}
